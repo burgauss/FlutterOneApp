@@ -16,7 +16,8 @@ class CoffeePrefs extends StatelessWidget {
             color: Colors.brown[100],
             colorBlendMode: BlendMode.multiply,
           ),
-          SizedBox(width: 50),
+          const Expanded(child: SizedBox()),
+          const Text('+'),
         ]),
         Row(children: [
           const Text('Sugars: '),
@@ -27,6 +28,8 @@ class CoffeePrefs extends StatelessWidget {
             color: Colors.brown[100],
             colorBlendMode: BlendMode.multiply,
           ),
+          const Expanded(child: SizedBox()),
+          const Text('+'),
         ])
       ],
     );
