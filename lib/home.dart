@@ -22,18 +22,22 @@ class Home extends StatelessWidget {
               color: Colors.brown[200],
               padding: const EdgeInsets.all(20),
               alignment: Alignment.center,
-              child: const Text('How I like my coffe...'),
+              child: const Text('How I like my coffe...',
+                  style: TextStyle(
+                      color: Colors.brown,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18)),
             ),
             Container(
               color: Colors.brown[100],
               padding: const EdgeInsets.all(20),
               child: const CoffeePrefs(),
             ),
-            Expanded(
-              //TODO: Problem to size the image
-              child:
-                  Image.asset('assets/coffee-beans-bg.jpg', fit: BoxFit.cover),
-            ),
+            SizedBox(
+                width: double.infinity,
+                height: MediaQuery.of(context).size.height * 0.5,
+                child: Image.asset('assets/coffee-beans-bg.jpg',
+                    fit: BoxFit.fill)),
           ],
         ));
   }
